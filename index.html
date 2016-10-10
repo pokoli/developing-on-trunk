@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Why you should develop on trunk?</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h1> Why you should develop on trunk?</h1>
+                    <p>Available on: <a target="_blank"
+                        href="http://pokoli.github.io/developing-on-trunk">
+                        http://pokoli.github.io/developing-on-trunk</a></p>
+                </section>
+				<section>
+                    <h2>Disclaimer</h2>
+                    <img class="fragment" src="img/teacher.jpg"/>
+                    <h3 class="fragment">Just personal opinion/experience</h3>
+                    <h3 class="fragment">Feel free to follow your own rules</h3>
+                </section>
+				<section>
+                    <h2>What does <span class="enfassis">trunk</span> mean?</h2>
+                    <h3>
+                        The latest
+                        <span class="fragment enfassis"> development
+                        </span>
+                        version of tryton
+                    </h3>
+                    <p class="fragment">So it makes sense to use it for
+                        <span class="enfassis"> development
+                        </span>
+                    doesn't it?</p>
+                </section>
+				<section>
+                    <h2>How to obtain trunk?</h2>
+                    <ul class="enfassis">
+                        <li class="fragment">hg (n)clone -b default</li>
+                        <li class="fragment">pip install --find-links https://trydevpi.tryton.org/</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>How is trunk?</h2>
+                    <img class="fragment" src="img/cookie-monster.jpg"/>
+                </section>
+				<section>
+                    <h2>How is trunk?</h2>
+                    <img class="fragment" src="img/beautiful.jpg"/>
+                </section>
+				<section>
+                    <h2>How is trunk?</h2>
+                    <ul class="enfassis">
+                        <li class="fragment">Like the new tryton release</li>
+                        <li class="fragment">So stable</li>
+                        <li class="fragment">Constantly Evolving
+                            <span class="fragment"> (until feature freeze)</span>
+                        </li>
+                    </ul>
+                    <h2 class="fragment">How to update:</h2>
+                    <ul class="enfassis">
+                        <li class="fragment">hg (n)pull -u --rebase</li>
+                        <li class="fragment">pip install --upgrade --find-links https://trydevpi.tryton.org/</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Remainder: Development Process</h2>
+                    <ol class="enfassis">
+                        <li class="fragment">BluePrint (discussion)</li>
+                        <li class="fragment">CodeReview</li>
+                        <li class="fragment">Automated Test + CI</li>
+                        <li class="fragment">Feature Freeze</li>
+                        <li class="fragment">PyPI</li>
+                        <li class="fragment">No API changes in released versions</li>
+                    </ol>
+                </section>
+				<section>
+                    <h2>Why to use trunk?</h2>
+                    <ol class="enfassis"> <li class="fragment">More discussions with comunity</li>
+                        <li class="fragment">Only way to improve clients</li>
+                        <li class="fragment">Only way to improve API</li>
+                        <li class="fragment">Features developed by others</li>
+                        <li class="fragment">Better code thanks to review</li>
+                        <li class="fragment">Less bugs on releases</li>
+                        <li class="fragment">Migration before release</li>
+                        <li class="fragment">Upload your modules to PyPI</li>
+                    </ol>
+                </section>
+				<section>
+                    <h2>Why to use trunk?</h2>
+                    <h3 class="fragment">Avoid technical debt</h3>
+                    <img class="fragment" src="img/cookie-monster.jpg"/>
+                </section>
+				<section>
+                    <h2>What's technical debt?</h2>
+                    <p>Extra development work that arises when code that is
+                    easy to implement in the short run is used instead of
+                    applying the
+                    <span class="enfassis">best overall solution </span>
+                    </p>
+                </section>
+				<section>
+                    <h2>Technical debt</h2>
+                    <img src="img/technical-dept-today.jpg"/>
+                </section>
+				<section>
+                    <h2>Technical debt</h2>
+                    <img src="img/technical-dept.jpeg"/>
+                </section>
+				<section>
+                    <h2>Fix technical debt</h2>
+                    <img src="img/brace-yourself.jpg"/>
+                </section>
+				<section>
+                    <h2>Fix technical debt</h2>
+                    <img src="img/its-worth.jpg"/>
+                </section>
+				<section>
+                    <h2>Great, but...</h2>
+                    <img class="fragment" src="img/code-broken.jpg"/>
+                </section>
+				<section>
+                    <h2>Great, but...</h2>
+                    <h3>My code may be broken by trunk changes</h3>
+                    <ul class="enfassis">
+                        <li class="fragment">You will have to fix in the next migration also...</li>
+                        <li class="fragment">Not forced to update your environment </li>
+                        <li class="fragment">It's easier with smaller changes</li>
+                        <li class="fragment">You will use more newer features</li>
+                        <li class="fragment">tryton-commit (mailing list or IRC)</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Great, but...</h2>
+                    <img class="fragment" src="img/production-environment.jpg"/>
+                </section>
+				<section>
+                    <h2>Great, but...</h2>
+                    <h3>Production environment is on version X.X</h3>
+                    <ul class="enfassis">
+                        <li class="fragment">Migrate to latest stable (as you will do someday)</li>
+                        <li class="fragment">Use branches</li>
+                        <li class="fragment">Backport changes</li>
+                        <li class="fragment">No new features on older versions</li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>Great, but...</h2>
+                    <h3 class="fragment">(put whatever you want here)</h3>
+                    <img class="fragment" src="img/excuses.jpg"/>
+                </section>
+				<section>
+                    <h2>Conclusions</h2>
+                    <img class="fragment" src="img/you-win.jpeg">
+                </section>
+				<section>
+                    <h2>Conclusions</h2>
+                    <img src="img/i-win.png">
+                </section>
+				<section>
+                    <h2>Conclusions</h2>
+                    <img src="img/win-win.jpg">
+                </section>
+				<section>
+                    <h2>Conclusions</h2>
+                    <img src="img/lets-win.jpg">
+                </section>
+				<section>
+                    <h2>I want to help
+                        <span class="enfassis fragment"> (Seriously)
+                        <img src="img/i-can-help.jpg">
+                    </span>
+                    </h2>
+                </section>
+				<section>
+                    <h2>I want to help
+                        <span class="enfassis"> (Seriously)</span>
+                    </h2>
+                    <ul>
+                        <li><a target="_blank"
+                            href="mailto:sergi@koopli.com">
+                            sergi (at) koopli (dot) com
+                        <li><a target="_blank"
+                            href="https://www.twitter.com/pokoli_srk">
+                            @pokoli_srk on twitter
+                        </a></li>
+                        <li>pokoli IRC Channel</li>
+                        <li>Let's talk on about it on the Unconference!</li>
+                    </ul>
+                </section>
+				<section>
+                    <img src="img/questions.png">
+                </section>
+				<section>
+                    <h1>Thank you!</h1>
+                    <p>The presentation code is avaiable on </p>
+                    <p><a target="_blank"
+                        href="http://github.com/pokoli/developing-on-trunk">
+                        http://github.com/pokoli/developing-on-trunk
+                    </a>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
