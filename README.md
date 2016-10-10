@@ -1,4 +1,4 @@
-A presentation on how to contribute to [Tryton](http://www.tryton.org) using
+A presentation why you must develop on trunk version of [Tryton](http://www.tryton.org) using
 [reveal.js](http://lab.hakim.se/reveal-js/).
 
 ## License
